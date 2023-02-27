@@ -1,0 +1,29 @@
+.menu {
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        &_l {
+            gap: 40px;
+        }
+    }
+    &__arrow {
+        display: none;
+    }
+    @media(max-width: ($md3 + px)) {
+        &__list{
+            display: none;
+        }
+        &__arrow {
+            display: block;
+            margin: 0 auto;
+            transform: rotate(135deg);
+            width: 30px;
+            height: 30px;
+            border-top: 10px solid $green-accent;
+            border-right: 10px solid $green-accent;
+            background: transparent;
+        }
+    }
+}

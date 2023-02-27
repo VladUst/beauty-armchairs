@@ -1,0 +1,48 @@
+.promo {
+    background: url(../../assets/img/super_chair.jpg) center (center/cover) no-repeat;
+    min-height: 604px;
+    padding: 192px 0;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        max-width: 308px;
+    }
+    h1 {
+        font-weight: 700;
+        color: white;
+        margin: 0;
+        @include font-size(48);
+    }
+    &__subtitle {
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__button {
+        max-width: 60%;
+    }
+    @media(max-width: ($md3 + px)) {
+        min-height: 300px;
+        padding: 70px 0;
+        background-position: 10%;
+        &__wrapper {
+            min-width: 100%;
+            text-align: center;
+            gap: 30px;
+            align-items: center;
+        }
+        &__button {
+            min-width: 70%;
+        }
+    }
+    @media(max-width: ($md4 + px)) {
+        h1 {
+            @include font-size(32);
+        }
+        &__button {
+            min-width: 90%;
+        }
+    }
+}

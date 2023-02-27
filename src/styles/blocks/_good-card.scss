@@ -1,0 +1,22 @@
+.good-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    &__descr {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $dark;
+    }
+    &__price {
+        @include font-size(21);
+        text-align: center;
+        font-weight: 500;
+    }
+    @media(max-width: ($md2 + px)) {
+    }
+}

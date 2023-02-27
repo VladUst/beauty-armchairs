@@ -1,0 +1,61 @@
+.special-offers {
+    min-height: 954px;
+    padding: 70px 0 132px;
+    background-color: $gray;
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+        h2 {
+            @include font-size(24);
+            font-weight: 700;
+            color: black;
+        }
+        img {
+            margin-left: auto;
+            fill: black;
+        }
+    }
+    &__row {
+        display: flex;
+        align-content: stretch;
+        align-items: center;
+        gap: 30px;
+    }
+    &__item {
+        flex-basis: 25%;
+    }
+    &__advantages-card{
+        margin-top: 100px;
+        flex-basis: 50%;
+    }
+    @media(max-width: ($md2 + px)) {
+        padding: 70px 0;
+        &__header {
+            justify-content: center;
+            img {
+                display: none;
+            }
+        }
+        &__row {
+            flex-wrap: wrap;
+        }
+        &__item {
+            flex-basis: 45%;
+            flex-grow: 1;
+        }
+        &__advantages-card{
+            margin-top: 30px;
+            min-width: 100%;
+        }
+    }
+    @media(max-width: ($md3 + px)) {
+        padding: 30px 0;
+        h2 {
+            @include font-size(18);
+        }
+        &__item {
+            min-width: 80%;
+        }
+    }
+}

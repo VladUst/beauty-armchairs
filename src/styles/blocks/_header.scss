@@ -1,0 +1,39 @@
+.header {
+    border-bottom: 1px solid $gray;
+    &__menu {
+        padding: 17px 0;
+        min-height: 50px;
+        background-color: $gray;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 120px;
+        padding: 20px 0;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        img{
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        span{
+            margin-left: 20px;
+            font-weight: 700;
+            @include font-size(36);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $green-accent;
+        }
+    }
+    @media(max-width: ($md4 + px)) {
+        &__info {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

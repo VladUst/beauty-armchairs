@@ -1,0 +1,17 @@
+.link {
+    color: $dark;
+    @include font-size(14);
+    &_secondary {
+        color: black;
+        @include font-size(16);
+    }
+    &_s {
+        @include font-size(12);
+    }
+    @media(max-width: ($md3 + px)) {
+        @include font-size(18);
+        &_secondary {
+            @include font-size(18);
+        }
+    }
+}
